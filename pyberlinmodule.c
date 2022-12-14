@@ -3,7 +3,7 @@
 #include <Python.h>
 
 static PyObject *
-pyberlin_hello(PyObject *self)
+pyberlin_hello(PyObject *self, PyObject *args)
 {
     return Py_BuildValue("i", 1);
 }
