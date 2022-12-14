@@ -25,6 +25,8 @@ python -m sysconfig > config.txt
 python -c "import sysconfig; print(sysconfig.get_config_var('CC'))"
 python -c "import sysconfig; print(sysconfig.get_config_var('INCLUDEPY'))"
 
+ls $(python -c "import sysconfig; print(sysconfig.get_config_var('INCLUDEPY'))")
+
 clang -I$(python -c "import sysconfig; print(sysconfig.get_config_var('INCLUDEPY'))") -c pyberlinmodule.c
 
 file pyberlinmodule.o

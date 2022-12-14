@@ -2,3 +2,4 @@
 .venv/
 build/
 pyberlin.egg-info
+pyberlinmodule.o
