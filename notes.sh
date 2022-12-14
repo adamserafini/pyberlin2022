@@ -1,6 +1,7 @@
 # The Easy Way
 pip install -vvv .
 pip uninstall .
+rm -rf build
 
 # The Hard Way
 which python
@@ -9,6 +10,7 @@ cat $(which python)
 hexdump $(which python)
 file $(which python)
 otool -h $(which python)
+otool -tv $(which python)
 otool -tv $(which python) | grep Py_BuildValue
 otool -p _Py_BuildValue -tv $(pyenv which python) > temp.txt
 
