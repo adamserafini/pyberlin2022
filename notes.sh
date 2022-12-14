@@ -35,8 +35,6 @@ python -c "import sysconfig; print(sysconfig.get_config_var('EXT_SUFFIX'))"
 
 $(python -c "import sysconfig; print(sysconfig.get_config_var('BLDSHARED'))") pyberlinmodule.o -o pyberlin$(python -c "import sysconfig; print(sysconfig.get_config_var('EXT_SUFFIX'))")
 
-python -c "import sysconfig; print(sysconfig.get_path('platlib'))"
-
 file pyberlin$(python -c "import sysconfig; print(sysconfig.get_config_var('EXT_SUFFIX'))")
 otool -tv pyberlin$(python -c "import sysconfig; print(sysconfig.get_config_var('EXT_SUFFIX'))")
 
