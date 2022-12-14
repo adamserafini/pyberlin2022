@@ -3,13 +3,13 @@
 #include <Python.h>
 
 static PyObject *
-pyberlin_hello(PyObject *self, PyObject *args)
+pyberlin_hello(PyObject *self)
 {
     return Py_BuildValue("i", 1);
 }
 
 static PyMethodDef PyBerlinMethods[] = {
-    {"hello", pyberlin_hello, METH_VARARGS, "Hello PyBerlin!"},
+    {"hello", pyberlin_hello, METH_NOARGS, "Hello PyBerlin!"},
     {NULL, NULL, 0, NULL}        /* Sentinel */
 };
 
