@@ -37,5 +37,4 @@ $(python -c "import sysconfig; print(sysconfig.get_config_var('BLDSHARED'))") py
 
 python -c "import sysconfig; print(sysconfig.get_path('platlib'))"
 
-cp pyberlin.cpython-310-darwin.so $(python -c "import sysconfig; print(sysconfig.get_path('platlib'))")
-
+cp pyberlin$(python -c "import sysconfig; print(sysconfig.get_config_var('EXT_SUFFIX'))") $(python -c "import sysconfig; print(sysconfig.get_path('platlib'))")
